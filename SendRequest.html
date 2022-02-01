@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Request</title>
+
+</head>
+<body>
+        <h2>Send request to the server</h2>
+        <form id="form" action="http://localhost/UI/admin.html" method="post" target="_blank">
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <input type="submit" value="Submit">
+        </form>
+
+        <h2>change form method</h2>
+        <select id="mth">
+            <option value="get" selected>GET</option>
+            <option value="post">POST</option>
+        </select>
+        <button onclick="changeMethod(document.getElementById('mth').value)">Change Method</button>
+
+        <h2>change action page</h2>
+        <input id="act" type="text">
+        <button onclick="changeAction(document.getElementById('act').value)">Change Method</button>
+    <script>
+        function changeMethod(method){
+            document.getElementById("form").method = method;
+        }
+
+        function changeAction(action){
+            document.getElementById("form").action = action;
+        }
+    </script>
+</body>
+</html>
